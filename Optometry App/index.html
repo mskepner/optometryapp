@@ -38,11 +38,25 @@
             <li>
                 Product A.1
                 <ul>
-                    <li><a href="#" onclick="var ref = window.open('http://samplepdf.com/sample.pdf', '_blank');">Product Info</a></li>
-                    <li><a href="#" onclick="var ref = window.open('http://www.google.com', '_blank');">Website</a></li>
+                    <li><a href="#" id="openExternalPDF2" onclick="window.open('http://samplepdf.com/sample.pdf', '_blank');">Product Info</a></li>
+                    <li><a href="#" id="openExternalInAppBrowser2" onclick="window.open('http://www.google.com', '_blank');">Website</a></li>
+                </ul>
+            </li>
+            <li>
+                Product B.2
+                <ul>
+                    <li><a href="#" onclick="window.open('http://samplepdf.com/sample.pdf', '_system');">Product Info</a></li>
+                    <li><a href="#" onclick="window.open('http://www.google.com', '_system');">Website</a></li>
                 </ul>
             </li>
         </ul>
+        <div class="action-area ch80">
+				<button class="button dh" id="openLocal">Open embedded Image resource</button>
+				<button class="button dh" id="openExternalInAppBrowser">Open external page with InAppBrowser</button>
+				<button class="button dh" id="openPDF">Open embedded PDF (iOS only)</button>
+				<button class="button dh" id="openExternalPDF">Open online PDF</button>
+				<button class="button dh" id="openExternalInSystemBrowser">Open in system browser.</button>
+			</div>
     </div>
     
     <!-- Contact Us -->
@@ -83,6 +97,7 @@
     
     <!-- Scripts -->
     <script src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="scripts/main.js"></script>
     <script src="kendo/js/jquery.min.js"></script>
     <script src="kendo/js/kendo.mobile.min.js"></script>
     <!--  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=true"></script>
